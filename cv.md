@@ -30,8 +30,8 @@ In my current workplace, I have reached the ceiling. I need activities in which 
 * _Courses:_ 
         * RS Schools Course «JavaScript/Front-end. Stage 0» (in progress);
         * Udemy:
-            * HTML/CSS
-            * JavaScript + React (in process…) 
+            * HTML/CSS (in progress)
+            * JavaScript + React (in progress) 
 
 ## Work experience:
 * Project Marvel
@@ -56,7 +56,7 @@ initAccordions();
 
 ## Languages
 * _Russian_  - native speaker.
-* _English_ - A2 (B1 in process…)
+* _English_ - A2 (B1 in progress)
 
 ## _My strengths:_
 * Quick learner
