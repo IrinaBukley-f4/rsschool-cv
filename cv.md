@@ -32,3 +32,34 @@ In my current workplace, I have reached the ceiling. I need activities in which 
         * Udemy:
             * HTML/CSS
             * JavaScript + React (in process…) 
+
+## Work experience:
+* Project Marvel
+
+## Code example:
+
+```JavaScript
+function initAccordions() {
+    document
+      .querySelectorAll(".accordion .accordion__show-more")
+      .forEach( function (btnEl) {
+        btnEl.addEventListener("click", function (event) {
+          event.currentTarget
+            .closest(".accordion")
+            .classList.toggle("accordion_opened");
+        });
+    });
+}
+  
+initAccordions();
+```
+
+## Languages
+* _Russian_  - native speaker.
+* _English_ - A2 (B1 in process…)
+
+## _My strengths:_
+* Quick learner
+* Full immersion in the essence of the problems
+* Diligence
+* Blind typing in Russian and English
