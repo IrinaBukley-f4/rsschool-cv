@@ -77,7 +77,7 @@
 .about, .prof, .edu, .quote, .contacts, .education {
     margin: 0 0 2rem 0;
 }
-.about__descr p{
+.about__descr p, .about__descr li{
     font-size: 1.25rem;
     max-width: 90%;
     margin: 1rem 0;
