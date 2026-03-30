@@ -33,3 +33,28 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
+.header__title, .header__descr p  {
+    color: #ffffff;
+    text-align: right;
+}
+.header__title {
+    font-size: 3rem;
+    letter-spacing: 6px;
+}
+.header__descr p {
+    margin: 20px 0 0 0;
+    font-size: 1.5rem;
+}
+.header__avatar {
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    z-index: 6;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header__avatar img {
+    width: 100%;
+}
