@@ -48,24 +48,24 @@
                 </div>
                 <div class="prof__block-skills">
                   <p>Code example:</p>
-                  <ul>
+                  <ul class="about__descr">
                       <li>JavaScript</li>
                   </ul>
-                  <p class="about__descr">
+                  <p>
                     <pre>
-                      function initAccordions() {
-                        document
-                          .querySelectorAll(".accordion .accordion__show-more")
-                          .forEach( function (btnEl) {
-                            btnEl.addEventListener("click", function (event) {
-                              event.currentTarget
-                                .closest(".accordion")
-                                .classList.toggle("accordion_opened");
-                            });
-                        });
-                      }
-                        
-                      initAccordions();
+          function initAccordions() {
+            document
+              .querySelectorAll(".accordion .accordion__show-more")
+              .forEach( function (btnEl) {
+                btnEl.addEventListener("click", function (event) {
+                  event.currentTarget
+                    .closest(".accordion")
+                    .classList.toggle("accordion_opened");
+                });
+            });
+          }
+            
+          initAccordions();
                     </pre>
                   </p>
               </div>
