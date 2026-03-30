@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Autour One', cursive;
+}
+.container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 5;
+}
+.header {
+    background: url('./img/top.jpg') no-repeat;
+    background-position: center;
+    min-height: 250px;
+    position: relative;
+    z-index: 1;
+    padding: 50px 100px;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.header__title, .header__descr p  {
+    color: #ffffff;
+    text-align: right;
+}
+.header__title {
+    font-size: 3rem;
+    letter-spacing: 6px;
+}
+.header__descr p {
+    margin: 20px 0 0 0;
+    font-size: 1.5rem;
+}
+.header__avatar {
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    z-index: 6;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header__avatar img {
+    width: 100%;
+}
+.wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 150px 0 0 0;
+}
+.title {
+    font-size: 2rem;
+    width: 70%;
+    margin: 0 0 1.5rem 0;
+}
+.subtitle {
+    font-size: 1.75rem;
+    color: #613b5e;
+    margin: 1rem 0 0.5rem 0;
+}
+.about, .prof, .edu, .quote, .contacts, .education {
+    margin: 0 0 2rem 0;
+}
+.about__descr p, .about__descr li{
+    font-size: 1.25rem;
+    max-width: 90%;
+    margin: 1rem 0;
+}
+.prof__block-title {
+    font-size: 1.5rem;
+    color: #8d4788;
+    margin: 1.5rem 0 0.5rem 0;
+}
+.prof__block-skills, .prof__block-descr {
+    margin: 1rem 0;
+}
+.prof__block-skills p, .prof__block-descr p {
+    text-decoration: underline;
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+}
+.edu {
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar {
+    text-align: right;
+}
+.lang__list-item input {
+    display: none;
+}
+.lang__list-item span {
+    position: relative; 
+    display: inline-block; 
+    width: 20px; height: 20px; 
+    background: #F5F5F5; 
+    border-radius: 50%; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+   }
+.lang__list-item input:checked + span { 
+    background: #613b5e;
+   }
+.lang__list-item input:checked + span::before { 
+    content: '';
+    position: absolute;
+    left: 6px; top: 6px;
+    background: #fff;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+}
+.lang__list-item .visible {
+    display: inline;
+    width: 18px; height: 18px;
+
+}
+.lang__list-item .visible:disabled {
+    border: 1px solid #613b5e;
+    margin: 0 0 0 2px;
+}
+.contacts__list {
+    display: flex;
+    justify-content: flex-end;
+}
+.contacts__list-item a {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.contacts__list-item a img {
+    width: 100%;
+}
+.education__list-item {
+    font-weight: 700;
+    margin: 5px 0 0 0;
+}
+.education__list-item span {
+    display: block;
+    font-weight: 400;
+    margin: 5px 0;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+.education__list-item .year {
+    font-style: normal;
+    font-size: 1rem;
+}
+.block {
+    display: flex;
+}
+.block a {
+    margin: 0 0 0 15px;
+}
+.lang {
+    margin: 0 0 30px 0;
+}
+.lang__list-item {
+    font-size: 1.25rem;
+    margin: 10px 0 5px 0;
+}
+.skills__list {
+    margin: 20px 0 0 0;
+}
+
+.footer {
+    background: url('./img/top.jpg') no-repeat;
+    background-position: center;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    margin: 30px 0 0 0;
+}
+.footer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(250, 250, 250, 0.4);
+}
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.footer__link, .footer__text {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.rs__logo {
+    display: block;
+    height: 50px;
+    width: 250px;
+}
+.rs__logo img {
+    width: 100%;
+    height: 100%;
+}
