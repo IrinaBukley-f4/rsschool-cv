@@ -70,7 +70,7 @@
     top: -10px;
     left: -30px;
 }
-pre {
+.slash {
     color: #ffffff;
 }
 .ru, .en {
@@ -241,4 +241,71 @@ pre {
 .rs__logo img {
     width: 100%;
     height: 100%;
+}
+@media (max-width: 1440px) {
+    .wrapper {
+        max-width: 90%;
+        flex-direction: column;
+    }
+}
+@media (max-width: 996px) {
+    html {
+        font-size: 14px;
+    }
+    .header__descr {
+        width: 50%;
+        margin: 0 0 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    .header {
+        padding: 50px;
+    }
+    .header__avatar {
+        top: 10rem;
+        left: 1rem;
+        z-index: 6;
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width: 575px) {
+    .header__descr {
+        width: 65%;
+    }
+    .edu {
+        flex-direction: column;
+    }
+}
+@media (max-width: 470px) {
+    .wrapper {
+        padding-top: 2rem;
+    }
+    .header__title {
+        letter-spacing: 2px;
+    }
+    .header__avatar {
+        display: none;
+    }
+    .header__descr {
+        width: 80%;
+    }
+    .language {
+        top: -20px;
+    }
+}
+@media (max-width: 380px) {
+    .header {
+        padding: 50px 30px 30px;
+    }
+    .header__title {
+        font-size: 2.5rem;
+    }
+    .language {
+        top: -20px;
+        left: -10px;
+    }
 }
