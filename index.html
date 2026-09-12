@@ -11,185 +11,225 @@
     <header class="header">
         <div class="container">
           <div class="language">
-            <!-- <div class="en">en</div>
-            <pre>   /   </pre>
-            <div class="ru">ru</div> -->
+            <div data-i18="en" id="en" class="en active">en</div>
+            <pre class="slash">   /   </pre>
+            <div data-i18="ru" id="ru" class="ru">ru</div>
           </div>
-          <h1 class="header__title">Irina Bukley</h1>
+          <h1 data-i18="name" class="header__title">Irina Bukley</h1>
           <div class="header__descr">
-            <p>Open to suggestions and new projects</p>
+            <p data-i18="open">Open to suggestions and new projects</p>
           </div>
           <div class="header__avatar">
             <img src="./img/avatar.png" alt="avatar">
           </div>
+          <nav class="navigation">
+            <ul>
+              <li><a id="nav-about" href="#about">About</a></li>
+              <li><a id="nav-contacts" href="#contacts">Contacts</a></li>
+              <li><a id="nav-edu" href="#edu">Education</a></li>
+              <li><a id="nav-skills" href="#skills">Skills</a></li>
+            </ul>
+          </nav>
         </div>
     </header>
     <div class="wrapper">
       <main class="main">
-        <h2 class="title">Irina Bukley | Junior front-end developer</h2>
+        <h2 data-i18="job" class="title">Irina Bukley | Junior front-end developer</h2>
         <section class="about">
-            <h2 class="subtitle">About</h2>
+            <h2 data-i18="about" class="subtitle" id="about">About</h2>
             <div class="about__descr">
-                <p>I'm actively studying Frontend Development! right now</p>
-                <p>My professional motivation is to develop in the field of development in both Frontend and Backend.</p>
-                <p>I like to benefit people and create user-friendly interfaces.</p>
+                <p data-i18="about-descr-1">I'm actively studying Frontend Development! right now</p>
+                <p data-i18="about-descr-2">My professional motivation is to develop in the field of development in both Frontend and Backend.</p>
+                <p data-i18="about-descr-3">I like to benefit people and create user-friendly interfaces.</p>
             </div>
         </section>
         <section class="prof">
-            <h2 class="subtitle">Professional experience</h2>
-            <p>(only on educational projects yet)</p>
+            <h2 data-i18="experience" class="subtitle">Professional experience</h2>
+            <p data-i18="experience-text">(only on educational projects yet)</p>
             <div class="prof__block">
-                <h3 class="prof__block-title">My first challenge - Stage 0</h3>
+                <h3 data-i18="challenge-1" class="prof__block-title">My first challenge - Stage 0 + self-study</h3>
                 <div class="block">
-                    <div class="prof__block-example">
-                      My first website:
-                    </div>
-                    <a href="https://irinabukley-f4.github.io/rsschool-cv/" target="_blank">My CV</a>
+                    <div data-i18="challenge-1-text" class="prof__block-example">My first websites:</div>
+                    <a href="https://rolling-scopes-school.github.io/irinabukley-f4-JSFEPRESCHOOL2026Q1/christmas-shop/" target="_blank">Christmas shop</a>
+                    <a href="https://rolling-scopes-school.github.io/irinabukley-f4-JSFEPRESCHOOL2026Q1/christmas-shop/" target="_blank">Own radio</a>
                 </div>
                 <div class="prof__block-skills">
-                  <p>Code example:</p>
+                  <p data-i18="challenge-new">What's interesting for me:</p>
+                  <ul>
+                      <li data-i18="challenge-1-new-1">➥ HTML</li>
+                      <li data-i18="challenge-1-new-2">➥ Adaptive layout</li>
+                      <li data-i18="challenge-1-new-3">➥ JS functionality</li>
+                  </ul>
+              </div>
+                <div class="prof__block-skills">
+                  <p data-i18="code-example">Code example:</p>
                   <ul class="about__descr">
                       <li>JavaScript</li>
                   </ul>
                     <pre>
-          function initAccordions() {
-            document
-              .querySelectorAll(".accordion .accordion__show-more")
-              .forEach( function (btnEl) {
-                btnEl.addEventListener("click", function (event) {
-                  event.currentTarget
-                    .closest(".accordion")
-                    .classList.toggle("accordion_opened");
-                });
-            });
+    function getTranslate(lang) {
+      const elems = document.querySelectorAll('[data-i18]'); 
+      const objKeysEn = i18Obj.en;
+      const objKeysRu = i18Obj.ru;
+      elems.forEach( (elem) => {
+        let currentElem = elem.getAttribute('data-i18');
+        for(let key in objKeysEn){
+          if(currentElem === key){
+            if(lang === ru) {
+              elem.textContent = objKeysRu[key];
+            }else {
+              elem.textContent = objKeysEn[key];
+            }
           }
-            
-          initAccordions();
+        }
+      })
+    }
+
+    getTranslate('ru');
                     </pre>
               </div>
-                <div class="prof__block-skills">
-                    <p>What's new for me:</p>
-                    <ul>
-                        <li >➥ HTML, CSS, Git</li>
-                        <!-- <li>➥ Переключение языка</li>
-                        <li>➥ Переключение цвета темы</li> -->
-                    </ul>
-                </div>
             </div>
             <div class="prof__block">
-                <h3 class="prof__block-title">My second challenge - Stage 1</h3>
-                <div class="block">
-                    <div class="prof__block-example">
-                      It will be after the successful completion of Stage 0
-                    </div>
+                <h3 data-i18="challenge-2" class="prof__block-title">My second challenge - Stage 0.5 Bootcamp + self-study</h3>
+                 <div class="block">
+                    <div data-i18="challenge-1-text" class="prof__block-example">My examples:</div>
+                    <a href="https://IrinaBukley-f4.github.io/cssMemeSlider/cssMemeSlider/index.html" target="_blank">cssMemeSlider</a>
+                    <a href="https://IrinaBukley-f4.github.io/shelter/shelter/index.html" target="_blank">Shelter</a>
+                    <a href="https://irinabukley-f4.github.io/photo-portfolio/" target="_blank">Photo portfolio</a>
                 </div>
+                <div class="prof__block-skills">
+                  <p data-i18="challenge-new">What's interesting for me:</p>
+                  <ul>
+                      <li data-i18="challenge-2-new-1">➥ CSS: variables</li>
+                      <li data-i18="challenge-2-new-2">➥ CSS: nesting</li>
+                      <li data-i18="challenge-2-new-3">➥ Slider on pure CSS</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="prof__block">
+                <h3 data-i18="challenge-3" class="prof__block-title">My third challenge - Stage 1 + self-study</h3>
+                 <div class="block">
+                    <div data-i18="challenge-3-text" class="prof__block-example">My examples: in progress</div>
+                    <!-- <a href="https://IrinaBukley-f4.github.io/cssMemeSlider/cssMemeSlider/index.html" target="_blank">cssMemeSlider</a>
+                    <a href="https://IrinaBukley-f4.github.io/shelter/shelter/index.html" target="_blank">Shelter</a>
+                    <a href="https://irinabukley-f4.github.io/photo-portfolio/" target="_blank">Photo portfolio</a> -->
+                </div>
+                <div class="prof__block-skills">
+                  <p data-i18="challenge-new">What's interesting for me:</p>
+                  <ul>
+                      <!-- <li data-i18="challenge-2-new-1">➥ CSS: variables</li>
+                      <li data-i18="challenge-2-new-2">➥ CSS: nesting</li>
+                      <li data-i18="challenge-2-new-3">➥ Slider on pure CSS</li> -->
+                  </ul>
+              </div>
             </div>
         </section>
         <section class="edu">
             <div class="hobby">
                 <h2 class="subtitle">&#128065; &#128065;</h2>
                 <ul class="hobby__list">
-                    <li class="hobby__list-item">✍ Fitness and dance aerobics</li>
-                    <li class="hobby__list-item">✍ Vocals</li>
-                    <li class="hobby__list-item">✍ Traveling with family</li>
-                    <li class="hobby__list-item">✍ Reading</li>
+                    <li data-i18="hobby-1" class="hobby__list-item">✍ Fitness and dance aerobics</li>
+                    <li data-i18="hobby-2" class="hobby__list-item">✍ Vocals</li>
+                    <li data-i18="hobby-3" class="hobby__list-item">✍ Traveling with family</li>
+                    <li data-i18="hobby-4" class="hobby__list-item">✍ Reading a wide variety of literature</li>
                 </ul>
             </div>
         </section>
         <section class="quote">
-            <h2 class="subtitle">Top 3 my favorite quotes</h2>
+            <h2 data-i18="quotes" class="subtitle">Top 3 my favorite quotes</h2>
             <ul class="quote__list">
-                <li class="quote__list-item">✘ The road will be mastered by those who walk.</li>
-                <li class="quote__list-item">✘ Show me a man who has never made a mistake and I will show you a man who has never achieved much.</li>
-                <li class="quote__list-item">✘ By giving up the phrase “I don’t have time,” you will soon realize that you have time for almost everything you consider necessary to do in life.</li>
+                <li data-i18="quotes-1" class="quote__list-item">✘ The road will be mastered by those who walk.</li>
+                <li data-i18="quotes-2" class="quote__list-item">✘ Show me a man who has never made a mistake and I will show you a man who has never achieved much.</li>
+                <li data-i18="quotes-3" class="quote__list-item">✘ By giving up the phrase “I don’t have time,” you will soon realize that you have time for almost everything you consider necessary to do in life.</li>
             </ul>
         </section>
-    </main>
-    <aside class="sidebar">
-      <div class="contacts">
-          <h2 class="subtitle">Contacts</h2>
-          <nav>
-            <ul class="contacts__list">
-              <li class="contacts__list-item"><a href="https://t.me/irina_bukley"><img src="./img/icons/telegram.png" alt="telegram"></a></li>
-              <li class="contacts__list-item"><a href="mailto:irinabukey@mail.ru"><img src="./img/icons/email.png" alt="email"></a></li>
-              <li class="contacts__list-item"><a href="https://www.linkedin.com/in/irina-bukley-283839227/"><img src="./img/icons/linkedin.png" alt="linkedin"></a></li>
-              <li class="contacts__list-item"><a href="tel:+375293310756"><img src="./img/icons/phone.png" alt="phone"></a></li>
-          </ul>
-          </nav>
-      </div>
-      <div class="education">
-          <h2 class="subtitle">Education</h2>
-          <ul class="education__list">
-              <li class="education__list-item">Quality manager
-              </li>
-              <li>
-                  <span >BNTU | Minsk, Belarus</span> <br>
-                  <span class="year">2002 - 2007</span>
-              </li>
-              <li class="education__list-item">Translator and referent in the field of professional communication
-              </li>
-              <li>
-                  <span >Academy of Postgraduate Education | Minsk, Belarus</span> <br>
-                  <span class="year">2004 - 2006</span>
-              </li>
-          </ul>
-      </div>
-      <div class="lang">
-          <h2 class="subtitle">Languages</h2>
-          <ul class="lang__list">
-              <li class="lang__list-item">Russian | Native</li>
-              <li class="lang__list-item">
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-              </li>
-              <li class="lang__list-item">English | B1</li>
-              <li class="lang__list-item">
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input type="radio" checked> <span></span>
-                  <input class="visible" type="radio" disabled>
-                  <input class="visible" type="radio" disabled>
-                  <input class="visible" type="radio" disabled>
-                  <input class="visible" type="radio" disabled>
-                  <input class="visible" type="radio" disabled>
-              </li>
-          </ul>
-      </div>
-      <div class="education">
-          <h2 class="subtitle">Skills</h2>
-          <ul class="skills__list">
-              <li class="skills__list-item">✍ HTML / CSS</li>
-              <!-- <li class="skills__list-item">✍ JavaScript / TypeScript</li>
-              <li class="skills__list-item">✍ Gulp / Webpack / Vite</li>
-              <li class="skills__list-item">✍ React / Redux / Material UI</li>
-              <li class="skills__list-item">✍ Reveal.js</li> -->
-              <li class="skills__list-item">✍ Git, GitHub</li>
-              <li class="skills__list-item">✍ Figma, Photoshop</li>
-              <!-- <li class="skills__list-item">✍ WordPress / PHP</li> -->
-          </ul>
-      </div>
-    </aside>
+      </main>
+      <aside class="sidebar">
+        <div class="contacts">
+            <h2 data-i18="contacts" class="subtitle" id="contacts"
+            >Contacts</h2>
+            <nav>
+              <ul class="contacts__list">
+                <li class="contacts__list-item"><a href="https://t.me/irina_bukley"><img src="./img/icons/telegram.png" alt="telegram"></a></li>
+                <li class="contacts__list-item"><a href="mailto:irinabukey@mail.ru"><img src="./img/icons/email.png" alt="email"></a></li>
+                <li class="contacts__list-item"><a href="https://www.linkedin.com/in/irina-bukley-283839227/"><img src="./img/icons/linkedin.png" alt="linkedin"></a></li>
+                <li class="contacts__list-item"><a href="tel:+375293310756"><img src="./img/icons/phone.png" alt="phone"></a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="education">
+            <h2 data-i18="edu" class="subtitle" id="edu">Education</h2>
+            <ul class="education__list">
+                <li data-i18="edu-job-1" class="education__list-item">Quality manager</li>
+                <li>
+                    <span data-i18="edu-address-1">BNTU | Minsk, Belarus</span> <br>
+                    <span class="year">2002 - 2007</span>
+                </li>
+                <li data-i18="edu-job-2" class="education__list-item">Translator and referent in the field of professional communication</li>
+                <li>
+                    <span ata-i18="edu-address-2" >Academy of Postgraduate Education | Minsk, Belarus</span> <br>
+                    <span class="year">2004 - 2006</span>
+                </li>
+            </ul>
+        </div>
+        <div class="lang">
+            <h2 data-i18="lang" class="subtitle">Languages</h2>
+            <ul class="lang__list">
+                <li data-i18="lang-ru" class="lang__list-item">Russian | Native</li>
+                <li class="lang__list-item">
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                </li>
+                <li data-i18="lang-en" class="lang__list-item">English | B1</li>
+                <li class="lang__list-item">
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input type="radio" checked> <span></span>
+                    <input class="visible" type="radio" disabled>
+                    <input class="visible" type="radio" disabled>
+                    <input class="visible" type="radio" disabled>
+                    <input class="visible" type="radio" disabled>
+                    <input class="visible" type="radio" disabled>
+                </li>
+            </ul>
+        </div>
+        <div class="education">
+            <h2 data-i18="skills" class="subtitle" id="skills">Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__list-item">✍ HTML / CSS / Sass</li>
+                <li class="skills__list-item">✍ Bootstrap / Pure.css</li>
+                <li class="skills__list-item">✍ JavaScript / TypeScript (basics)</li>
+                <li class="skills__list-item">✍ Vite</li>
+                <!-- <li class="skills__list-item">✍ React / Redux / Material UI</li> -->
+                <!-- <li class="skills__list-item">✍ Reveal.js</li> -->
+                <li class="skills__list-item">✍ Git, GitHub</li>
+                <li class="skills__list-item">✍ Figma, Photoshop</li>
+                <!-- <li class="skills__list-item">✍ WordPress / PHP</li> -->
+            </ul>
+        </div>
+      </aside>
     </div>
     <footer class="footer">
       <div class="container">
-        <a class="footer__link" href="https://github.com/irinabukley-f4">my github</a>
+        <a data-i18="footer" class="footer__link" href="https://github.com/irinabukley-f4">my github</a>
         <p class="footer__text">2026</p>
         <div class="footer__logo">
-          <a class="rs__logo" href="https://rs.school/courses/javascript-preschool-ru">
+          <a class="rs__logo" href="https://rs.school/courses/javascript">
             <img src="./img/rs-school-logo.svg" alt="rs-logo">
           </a>
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
