@@ -121,9 +121,36 @@ ruBtn.addEventListener('click', () => {
     getTranslate(ru);
     document.querySelector('.ru').classList.add('active');
     document.querySelector('.en').classList.remove('active');
-})
+});
 enBtn.addEventListener('click', () => {
     getTranslate(en);
     document.querySelector('.en').classList.add('active');
     document.querySelector('.ru').classList.remove('active');
-})
+});
+
+// navigation color
+
+const aboutEl = document.getElementById('about');
+const contactsEl = document.getElementById('contacts');
+const eduEl = document.getElementById('edu');
+const skillsEl = document.getElementById('skills');
+const aboutNavEl = document.getElementById('nav-about');
+const contactsNavEl = document.getElementById('nav-contacts');
+const eduNavEl = document.getElementById('nav-edu');
+const skillsNavEl = document.getElementById('nav-skills'); 
+
+aboutNavEl.addEventListener('click', () => coloredTitle (aboutEl));
+contactsNavEl.addEventListener('click', () => coloredTitle (contactsEl));
+eduNavEl.addEventListener('click', () => coloredTitle (eduEl));
+skillsNavEl.addEventListener('click', () => coloredTitle (skillsEl));
+
+function coloredTitle (title) {
+    title.style.backgroundColor = "#e9e773";
+    title.style.width = "fit-content";
+        title.style.margin = "1rem 0 0.5rem auto";
+    setTimeout(() => {
+        title.style.backgroundColor = "";
+        title.style.width = "";
+        title.style.margin = "1rem 0 0.5rem 0";
+    }, 2000);
+}
